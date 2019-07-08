@@ -16,4 +16,14 @@ class BankCreditRequest
     {
         return $this->amount;
     }
+
+    public function setCustomer($customer)
+    {
+        $this->customer = $customer;
+    }
+
+    public function setAmount($amount)
+    {
+        $this->amount = $amount;
+    }
 }

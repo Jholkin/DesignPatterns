@@ -4,14 +4,11 @@ namespace App\Adapter\APIBankY;
 
 use App\Adapter\APIBankY\Threads\Hilo;
 
-class YBankCreditSender implements Hilo
+class YBankCreditSender extends \Thread
 {
     public function sendCreditForValidate(YBankCreditApprove $request, YBankCreditSenderListener $listener) : void
     {
-        $thread = new Thread();
-        $runnable = new Runnable();
-        $thread->run();            
-        $thread->start();
+        \Thread.start();
     }
 
     public function run()
@@ -24,7 +21,7 @@ class YBankCreditSender implements Hilo
             }else {
                 $response->setApproved('N');
             }
-            $thread->sleep(1000*30);
+            \Thread.sleep(1000*30);
 
             $listener->notifyCreditResult($response);
     }
