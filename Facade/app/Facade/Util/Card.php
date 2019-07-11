@@ -14,4 +14,19 @@ class Card
         $this->company = $company;
         $this->cardType = $cardType;
     }
+
+    public function getPrefix()
+    {
+        return $this->prefix;
+    }
+
+    public function getCompany()
+    {
+        return $this->company;
+    }
+
+    public function getCardType()
+    {
+        return $this->cardType;
+    }
 }

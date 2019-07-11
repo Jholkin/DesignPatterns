@@ -4,5 +4,5 @@ namespace App\Facade;
 
 interface IPaymentFacade
 {
-    public function pay(PaymentRequest $paymentRequest) : PaymentResponse;
+    public function pay($paymentRequest); //PaymentResponse
 }
