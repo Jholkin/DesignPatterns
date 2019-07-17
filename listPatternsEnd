@@ -1,8 +1,13 @@
 ###########PATTERNS TERMINADOS#######
 -> Composite
 -> Facade
+-> Bridge
 
 ##########PATTERNS A MEDIAS#########
 -> Adapter
+-> Builder
+-> FactoryMethod
+-> Flyweight
+-> Singleton
 
 ##########PATTERNS FALTANTES########
