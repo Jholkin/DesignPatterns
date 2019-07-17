@@ -9,5 +9,6 @@
 -> FactoryMethod
 -> Flyweight
 -> Singleton
+-> AbstractFactory
 
 ##########PATTERNS FALTANTES########
