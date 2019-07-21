@@ -3,11 +3,12 @@
 -> Facade
 -> Bridge
 -> Singleton
+-> Proxy
 ##########PATTERNS A MEDIAS#########
 -> Adapter
 -> Builder
 -> FactoryMethod
 -> Flyweight
 -> AbstractFactory
--> Proxy
+-> Iterator
 ##########PATTERNS FALTANTES########
