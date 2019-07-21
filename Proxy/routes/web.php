@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('home', 'FlyweightController@home');
+Route::get('index', 'ProxyController@index');

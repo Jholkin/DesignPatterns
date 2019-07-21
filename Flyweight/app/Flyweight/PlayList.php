@@ -2,6 +2,8 @@
 
 namespace App\Flyweight;
 
+use App\Flyweight\PlayItemFactory;
+
 class PlayList
 {
     private $playListName;
@@ -12,9 +14,10 @@ class PlayList
         $this->playListName = $playListName;
     }
 
-    public function addItem($songName)
+    public function addPlayItem($songName, PlayItemFactory $playItemFactory)
     {
-        array_push($this->playItems,PlayItemFactory->createPlayItem($songName));
+        
+        array_push($this->playItems,$playItemFactory->createPlayItem($songName));
     }
 
     public function printList()
