@@ -4,5 +4,5 @@ namespace App\Iterator;
 
 interface IContainer
 {
-    public function createIterator() : IIterator;
+    public function createIterator();
 }

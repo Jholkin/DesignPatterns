@@ -2,22 +2,24 @@
 
 namespace App\Iterator;
 
+use App\Iterator\ListEmployee;
+
 class Employee implements IContainer
 {
     private $name;
     private $role;
     private $subordinates = array();
 
-    public function __construct($role,$puesto,$subordinates)
+    public function __construct($name,$role,$subordinates)
     {
-        $this->role = $role;
         $this->name = $name;
-        $this->subordinates = $subordinates;
+        $this->role = $role;
+        array_push($this->subordinates, $subordinates);
     }
 
     public function createIterator()
     {
-        return new TreeEmployeeIterator($this->Employee);
+        return new ListEmployee($this->Employee);
     }
 
     public function getName()
@@ -35,4 +37,7 @@ class Employee implements IContainer
         return $this->subordinates;
     }
 
+    public function toString() {
+        return "Employee{" . "name=" . $this->getName() . " - role=" . $this->getRole() . "}";
+    }
 }

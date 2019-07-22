@@ -6,11 +6,24 @@
 -> Proxy
 -> NullObject
 -> Builder
+-> Flyweight
 ##########PATRONES A MEDIAS#########
 -> Adapter
 -> FactoryMethod
--> Flyweight
 -> AbstractFactory
 -> Iterator
 
 ##########PATRONES FALTANTES########
+-> Prototype
+-> ObjectPool
+-> Decorator
+-> Command
+-> Observer
+-> TempleteMethod
+-> Strategy
+-> ChainOfResponsability
+-> Interpreter
+-> Mediator
+-> Memento
+-> State
+-> Visitor
