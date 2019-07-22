@@ -14,6 +14,9 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->app->bind('App\NullObject\Domain\Address', function($app) {
+            return new Address();
+        });
     }
 
     /**
