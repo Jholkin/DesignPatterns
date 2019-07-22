@@ -1,6 +1,6 @@
 <?php
 
-namespace App\FactoryMethod\Entity;
+namespace App\FactoryMethod\DAO;
 
 class Product
 {

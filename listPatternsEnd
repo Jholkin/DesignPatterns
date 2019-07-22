@@ -7,12 +7,11 @@
 -> NullObject
 -> Builder
 -> Flyweight
+-> AbstractFactory
 ##########PATRONES A MEDIAS#########
 -> Adapter
 -> FactoryMethod
--> AbstractFactory
 -> Iterator
-
 ##########PATRONES FALTANTES########
 -> Prototype
 -> ObjectPool

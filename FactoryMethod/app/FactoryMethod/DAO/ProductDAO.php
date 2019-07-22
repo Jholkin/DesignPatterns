@@ -2,56 +2,23 @@
 
 namespace App\FactoryMethod\DAO;
 
-use App\Factory\DBFactory;
+use App\FactoryMethod\FactoryDB;
+use App\FactoryMethod\Implement\AdapterDB;
 
-class ProductDAO implements DBFactory
+class ProductDAO
 {
-    private $dbFactory;
+    protected $adapterdb;
 
-    public function __construct(DBFactory $dbFactory)
+    public function __construct(AdapterDB $adapterdb)
     {
-        $this->dbFactory = $dbFactory;
-    }
-
-    public function getDataBase($type) {
-        switch ($type) {
-            case 'mysql':
-                return new MySqlDBAdapter();
-                break;
-            case 'pgsql':
-                # code...
-                break;
-            default:
-                echo "BASE DE DATOS NO SOPORTADA";
-                break;
-        }
+        $this->adapterdb = $adapterdb;
     }
 
     public function findAllProducts() {
-        
-        $sql = "SELECT * FROM productos ORDER BY id";
-        $ok = true;
+        $this->adapterdb->findAllProducts();
+    }
 
-        //ejecutamos la consulta
-        $rs = pg_query($this->connection(), $sql);
-
-        if ($rs) {
-            //obtenemos el número de filas
-            if (pg_num_rows($rs) > 0) {
-                echo "LISTADO DE PRODUCTOS";
-                echo "===================<br>";
-
-                //recorremos el rs y mostramos los datos
-                while ($obj = pg_fetch_object($rs)) {
-                    echo $obj->id." - ".$obj->name." - ".$obj->price."<br>";
-                }
-            } else {
-                echo "No se encontraron productos";
-            }
-        } else {
-            $ok = false;
-        }
-        
-        return $ok;
+    public function saveProduct($id,$name,$price) {
+        $this->adapterdb->saveProduct($id,$name,$price);
     }
 }
