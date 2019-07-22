@@ -4,6 +4,6 @@ namespace App\Iterator;
 
 interface IIterator
 {
-    public function hastNetx();
+    public function hastNext();
     public function next();
 }
