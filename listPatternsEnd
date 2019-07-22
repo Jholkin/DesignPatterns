@@ -1,16 +1,16 @@
-###########PATTERNS TERMINADOS#######
+###########PATRONES TERMINADOS#######
 -> Composite
 -> Facade
 -> Bridge
 -> Singleton
 -> Proxy
 -> NullObject
-##########PATTERNS A MEDIAS#########
--> Adapter
 -> Builder
+##########PATRONES A MEDIAS#########
+-> Adapter
 -> FactoryMethod
 -> Flyweight
 -> AbstractFactory
 -> Iterator
 
-##########PATTERNS FALTANTES########
+##########PATRONES FALTANTES########

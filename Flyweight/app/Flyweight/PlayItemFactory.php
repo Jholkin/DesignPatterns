@@ -10,8 +10,8 @@ class PlayItemFactory
 
     public function createPlayItem($songName)
     {
-        if ($this->enableFlyweight && searchSong($songName)) {
-            return searchSong($songName);
+        if ($this->enableFlyweight && $this->searchSong($songName)) {
+            return $this->searchSong($songName);
         } else {
             $this->idSequence += 1;
             $playItem = new PlayItem($this->idSequence,$songName);
@@ -19,8 +19,8 @@ class PlayItemFactory
             return $playItem;
         }
 
-        if ($this->enableFlyweight and searchSong($songName)) {
-            return searchSong($songName);
+        if ($this->enableFlyweight and $this->searchSong($songName)) {
+            return $this->searchSong($songName);
         } else {
             $this->idSequence += 1;
             $playItem = new PlayItem($this->idSequence,$songName);
