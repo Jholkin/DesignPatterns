@@ -9,12 +9,7 @@ class BuilderController extends Controller
 {
     public function index()
     {
-        $e=(new Employee)->EmployeeBuilder()
-        ->setName("jhil")
-        ->setAge("jhil")
-        ->setGender("jhil")->build();
-        var_dump($e); 
-        /*$employee = (new Employee)->EmployeeBuilder()
+        $employee = (new Employee)->EmployeeBuilder()
             ->setName("Jhil Palacios Mariano")
             ->setGender("Masculino")
             ->setAge("21")
@@ -27,8 +22,10 @@ class BuilderController extends Controller
             ->addPhones("7788990099", null, "Casa")
             ->build();
 
-        var_dump($employee);
-*/
-        //return view('index')->with('name',$name);
+        //var_dump($employee);
+
+        return view('index')->with('name',$employee->getName())
+                            ->with('age',$employee->getAge())
+                            ->with('gender',$employee->getGender());
     }
 }

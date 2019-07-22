@@ -9,47 +9,35 @@ class Employee
     private $name;
     private $age;
     private $gender;
-    public function addEmployee($name,$age,$gender)
+    private $address;
+    private $phones;
+    private $contacts;
+
+    public function addEmployee($name,$age,$gender,$address,$phones,$contacts)
     {
         $this->name = $name;
         $this->age = $age;
         $this->gender = $gender;
+        $this->address = $address;
+        $this->phones = $phones;
+        $this->contacts = $contacts;
     }
     public function __construct() {}
 
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getAge() {
+        return $this->age;
+    }
+
+    public function getGender() {
+        return $this->gender;
+    }
+
     public function EmployeeBuilder()
     {
-        return new class($this->name,$this->age,$this->gender){
-            private $name;
-            private $age;
-            private $gender;
-
-            public function setName($name){
-                $this->name=$name;
-                return $this;
-            }
-
-            public function setAge($age)
-            {
-                $this->age = $age;
-                return $this;
-            }
-
-            public function setGender($gender)
-            {
-                $this->gender = $gender;
-                return $this;
-            }
-
-            public function build()
-            {
-                $employee = new Employee();
-                $employee->addEmployee($this->name, $this->age, $this->gender);
-                return $employee;
-                //new Employee($this->name, $this->age, $this->gender, $this->address, $this->phones, $this->contacts);
-            }
-        };
-        /*
         return new class($this->name, $this->age, $this->gender, $this->address, $this->phones, $this->contacts) extends Employee implements IBuilder
         {
             private $name;
@@ -104,10 +92,10 @@ class Employee
             public function build()
             {
                 $employee = new Employee();
-                return $employee->addEmployee($this->name, $this->age, $this->gender, $this->address, $this->phones, $this->contacts);
-                //new Employee($this->name, $this->age, $this->gender, $this->address, $this->phones, $this->contacts);
+                $employee->addEmployee($this->name, $this->age, $this->gender, $this->address, $this->phones, $this->contacts);
+                return $employee;
             }
-        };*/
+        };
     }
 
 }

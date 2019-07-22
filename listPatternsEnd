@@ -4,6 +4,7 @@
 -> Bridge
 -> Singleton
 -> Proxy
+-> NullObject
 ##########PATTERNS A MEDIAS#########
 -> Adapter
 -> Builder
@@ -11,5 +12,5 @@
 -> Flyweight
 -> AbstractFactory
 -> Iterator
--> NullObject
+
 ##########PATTERNS FALTANTES########

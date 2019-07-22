@@ -8,6 +8,8 @@
 </head>
 <body>
     <p>Hola</p>
-    <p> {{ $name }} </p>
+    <p> Nombre: {{ $name }} </p>
+    <p> Edad: {{ $age }} </p>
+    <p> Genero: {{ $gender }} </p>
 </body>
 </html>
